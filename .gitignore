@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.next/
+.env
+.env.local
+.env.production
+*.log
+.DS_Store
+coverage/
+infra/nginx/certs/
+infra/nginx/acme/

@@ -1,0 +1,17 @@
+{
+  "name": "seoles",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w @seoles/api\" \"npm run dev -w @seoles/web\"",
+    "build": "npm run build -w @seoles/api && npm run build -w @seoles/web",
+    "db:migrate": "npm run db:migrate -w @seoles/api",
+    "db:seed": "npm run db:seed -w @seoles/api",
+    "db:studio": "npm run db:studio -w @seoles/api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
